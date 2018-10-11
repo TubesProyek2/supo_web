@@ -1,8 +1,5 @@
 <?php include "header.php" ?>
 
-<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap-theme.min.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap.min.css" />
-
 <?php if ($page == 'create') { ?>
 
                         <form action="<?php echo site_url('admin/create') ?>" method="post" enctype="multipart/form-data">
@@ -191,14 +188,13 @@
                         }
                         </script>
                         
-                        <br>
                         <table class="table table-striped">
                         <thead>
                             <th>ID Admin</th>
                             <th>Nama Admin</th>
                             <th>Username</th>
                             <th>Email</th>
-                            <th>&nbsp;Opsi</th>
+                            <th>&nbsp;Action</th>
                         </thead>
 
                         <?php foreach ($list as $l) { ?>
@@ -221,16 +217,10 @@
                                 </td>
 			                </tr>
 
-    <?php } ?>
+                        <?php } ?>
 
 			            </table>
                         </br></br>
-                        
-
 <?php } ?>
 
-
-
 <?php include "footer.php" ?>
-
-

@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/')?>editor/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/')?>editor/css/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/')?>editor/summernote/summernote.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap.min.css" />
+
 </head>
 <body>
 <div id="outer">

@@ -8,6 +8,10 @@
                             </tr>
                             </br>	      
                         </table>
+
+                        <hr>
+                        
+                        <hr>
                                     
                         <script type="text/javascript">
                         function tanya ()
@@ -19,51 +23,41 @@
                         }
                         </script>
 
+                        <table class="table table-striped">
                         <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Tutorial</th>
-                            <th>Kategori</th>
-                            <th>Penulis</th>
-                            <th>Hasil</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-
-                        <table width='1040' border='1' bo cellspacing='0' cellpadding='0'>
-                            <tr>
-                                <p align='center'><th width='10%' bgcolor='#8a9cae'>Kode Komentar</th></p>
-                                <p align='center'><th width='5%' bgcolor='#8a9cae'>Kode Berita</th></p>
-                                <p align='center'><th width='10%' bgcolor='#8a9cae'>Nama</th></p>
-                                <p align='center'><th width='10%' bgcolor='#8a9cae'>Email</th></p>
-                                <p align='center'><th width='30%' bgcolor='#8a9cae'>Komentar</th></p>
-                                <p align='center'><th width='5%' bgcolor='#8a9cae'>Tanggal</th></p>
-                                <p align='center'><th width='10%' bgcolor='#8a9cae'>Status</th></p>
-                                <p align='center'><th width='5%' bgcolor='#8a9cae'>Hapus</th></p>
-                            </tr>
+                            <th>ID Comment</th>
+                            <th>ID News</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Comment</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>&nbsp;Action</th>
+                        </thead>
                             
-<?php foreach ($list as $l) { ?>
+                        <?php foreach ($list as $c) { ?>
                                 
                             <tr>
-                                <td><?php echo $l->id_comment ?></td>
-                                <td><?php echo $l->id_news ?></td>
-                                <td><?php echo $l->name ?></td>
-                                <td><?php echo $l->email ?></td>
-                                <td><?php echo $l->comment ?></td>
-                                <td><?php echo date("d/m/Y", strtotime($l->date)) ?></td>
-                                <td align='center' >
+                                <td><?php echo $c->id_comment ?></td>
+                                <td><?php echo $c->id_news ?></td>
+                                <td><?php echo $c->name ?></td>
+                                <td><?php echo $c->email ?></td>
+                                <td><?php echo $c->comment ?></td>
+                                <td><?php echo date("d/m/Y", strtotime($c->date)) ?></td>
+                                <td>
                                     <?php
-                                        if($l->status == "BUKAN SPAM")
-                                        { echo $l->status; }
+                                        if($c->status == "BUKAN SPAM")
+                                        { echo $c->status; }
                                         else
-                                        { echo "<a href='".site_url('comment/stat/'.$l->id_comment)."'>KONFIRMASI</a>"; }
+                                        { echo "<a href='".site_url('comment/stat/'.$c->id_comment)."'>KONFIRMASI</a>"; }
                                     ?>
-                                    
                                 </td>
-                                <td align='center'>
-                                    <a onClick='return tanya()' href='<?php echo site_url('comment/delete/'.$l->id_comment) ?>'>
-                                        <img src='<?php echo base_url('assets/') ?>images/del2.png' width='20' height='20' alt='' />
-                                    </a>
+                                <td>
+                                    <a onClick='return tanya()' href='<?php echo site_url('comment/delete/'.$c->id_comment) ?>'>
+                                        <button type="button" name="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        &nbsp;Delete </button>
+				                    </a>
                                 </td>
                             </tr>
 

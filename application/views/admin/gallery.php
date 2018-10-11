@@ -151,6 +151,12 @@
                         </br>	      
                         </table>
 
+                        <hr>
+                            <a href="<?php echo site_url()?>gallery/create"><button type="button" class="btn btn-warning" "btn-lg">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                            Create Gallery</button></a>
+                        <hr>
+
                         <script type="text/javascript">
                         function tanya ()
                         {
@@ -161,39 +167,37 @@
                         }
                         </script>
 
-                        <table width='1040' border='1' >
-                        <tr>
-                            <p align='center'><th bgcolor='#8a9cae'>ID Gambar</th></p>
-                            <p align='center'><th bgcolor='#8a9cae'>Gambar</th></p>
-                            <p align='center'><th bgcolor='#8a9cae'>Keterangan</th></p>
-                            <p align='center'><th bgcolor='#8a9cae'>Edit</th></p>
-                            <p align='center'><th bgcolor='#8a9cae'>Hapus</th></p>
-                        </tr>
+                        <table class="table table-striped">
+                        <thead>
+                            <th>ID Photo</th>
+                            <th>Photo Name</th>
+                            <th>Description</th>
+                            <th>&nbsp;Action</th>
+                        </thead>
 
-    <?php foreach ($list as $l) { ?>
+                        <?php foreach ($list as $g) { ?>
 
-                        <tr>
-                            <td><?php echo $l->id_photo ?></td>
-                            <td align='center'><img src='<?php echo base_url('assets/foto/'.$l->photo) ?>' width='300' height='200' /></td>
-                            <td><?php echo $l->description ?></td>
-                            <td align='center' >
-                                <a href='<?php echo site_url('gallery/update/'.$l->id_photo) ?>'>
-                                    <img src='<?php echo base_url('assets/') ?>images/edit2.png' width='20' height='20' alt=''/>
-                                </a>
-                            </td>
-                            <td align='center'>
-                                <a onClick='return tanya()' href='<?php echo site_url('gallery/delete/'.$l->id_photo) ?>'>
-                                    <img src='<?php echo base_url('assets/') ?>images/del2.png' width='20' height='20' alt='' />
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?php echo $g->id_photo ?></td>
+                                <td><img src='<?php echo base_url('assets/foto/'.$g->photo) ?>' width='300' height='200' /></td>
+                                <td><?php echo $g->description ?></td>
+                                <td>
+                                    <a href='<?php echo site_url('gallery/update/'.$g->id_photo) ?>'>
+                                        <button type="button" name="button" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                        &nbsp;Update </button>
+                                    <a onClick='return tanya()' href='<?php echo site_url('gallery/delete/'.$g->id_photo) ?>'>
+                                        <button type="button" name="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        &nbsp;Delete </button>
+				                    </a>
+                                </td>
+                            </tr>
 
-    <?php } ?>
+                        <?php } ?>
 
                         </table>
                         </br></br>
-                        <p><a href="<?php echo site_url('gallery/create') ?>">Tambah Gambar  >></a></p>
-
 <?php } ?>
                         
 <?php include "footer.php" ?>
