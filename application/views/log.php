@@ -12,17 +12,20 @@
                     <tr>
                         <td><h4>Username</h4></td>
                         <td>:</td>
-                        <td><input type="text"  class="login-inp" name="user"/></td>
+                        <td><input type="text"  class="form-control" name="user"/></td>
                     </tr>
                     <tr>
                         <td><h4>Password</h4></td>
                         <td>:</td>
-                        <td><input type="password"  class="login-inp" name="pass"/></td>
+                        <td><input type="password"  class="form-control" name="pass"/></td>
+            
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td><input type="submit" name="button" value="LOGIN"/></td>
+                        <td>
+                        <button type="submit" name="button" class="btn btn-info">LOGIN</button>
+                        </td>
                     </tr>
                 </form>
                 </table>

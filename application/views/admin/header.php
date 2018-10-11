@@ -21,7 +21,7 @@
                 <li><a href="<?php echo site_url('admin/news') ?>">Data Berita</a></li>
                 <li><a href="<?php echo site_url('admin/gallery') ?>">Data Gambar</a></li>
                 <li><a href="<?php echo site_url('admin/comment') ?>">Data Komentar</a></li>
-                <li><a href="<?php echo site_url('log/out') ?>">Keluar</a></li>
+                <li><a href="<?php echo site_url('log/out') ?>">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div id="menubottom"></div>
     <div id="content">
         <div id="primarycontainer">
-            <div id="contenttiga">
+            <div id="">
                 <!-- awal konten 1 -->
                 <div class="post">
                     <h4>&nbsp;</h4>

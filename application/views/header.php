@@ -3,13 +3,16 @@
     <title>Sejarah Candi Songgoriti</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap.min.css" />
 </head>
 <center>
 <body>
 <div id="container">
 
     <div id="header">
-        <h1 style="font-family:'Blackwood Castle', 'Blackwood Castle Shadow', serif; font-size:40px;">SEJARAH CANDI SONGGORITI</h1>
+        <h1 style="font-family:'Blackwood Castle', 'Blackwood Castle Shadow', serif; font-size:40px;">
+        <br><br><br>SEJARAH CANDI SONGGORITI</h1>
     </div>
 
     <div id="sideheader"></div>

@@ -1,5 +1,8 @@
 <?php include "header.php" ?>
 
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('assets/css/')?>bootstrap.min.css" />
+
 <?php if ($page == 'create') { ?>
 
                         <form action="<?php echo site_url('admin/create') ?>" method="post" enctype="multipart/form-data">
@@ -8,52 +11,46 @@
                             <td width="145" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/admin2.png" width="70" height="70" /></td>
                             <td colspan="2"><h1>Tambah Admin</h1></td>
                         </tr>
-                        <tr></tr>
+                        <tr><td height="23" colspan="3">&nbsp;</td></tr>
                         <tr>
-                            <td height="40" colspan="3"></td>
-                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
-                            <tr>
-                                <tr>
-                                    <th valign="top">Nama </th>
-                                    <th>:</th>
-                                    <td><input type="text" size=40 class="inp-form" name="name" required pattern="[a-zA-Z]{3,20}" /></td>
-                                </tr> 
-                                <tr>
-                                    <td height="23" colspan="3">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <th valign="top">Username </th>
-                                    <th>:</th>
-                                    <td><input type="text" size=40 class="inp-form" name="username" required pattern="{3,15}" /></td>
-                                </tr>
-                                <tr>
-                                    <td height="23" colspan="3">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <th valign="top">Password</th>
-                                    <th>:</th>
-                                    <td><input type="password" size=40 class="inp-form" name="password" required pattern="{3,20}" /></td>
-                                </tr> 
-                                <tr>
-                                    <td height="23" colspan="3">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <th valign="top">Email</th>
-                                    <th>:</th>
-                                    <td><input type="text" size=40 class="inp-form" name="email" required pattern="{3,30}" /></td>
-                                    <td></td>
-                                </tr> 
-                                <tr><td height="23" colspan="3">&nbsp;</td></tr>
-                                <tr>
-                                    <td><a href="<?php echo site_url('admin/admin') ?>">&lt;&lt; Batal</a></td>
-                                    <td>&nbsp;</td>
-                                    <td><label for="textfield3">
-                                        <input type="submit" name="button" id="button" value="Save" />
-                                        <input type="reset" value="Reset" />
-                                    </label></td>
-                                    <td width="67"><div align="right"></div></td>
-                                </tr>
-                            </tr>
+                            <th valign="top">Nama </th>
+                            <th>:</th>
+                            <td><input type="text" size=40 class="inp-form" name="name" required pattern="[a-zA-Z]{3,20}" /></td>
+                        </tr> 
+                        <tr>
+                            <td height="23" colspan="3">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th valign="top">Username </th>
+                            <th>:</th>
+                            <td><input type="text" size=40 class="inp-form" name="username" required pattern="{3,15}" /></td>
+                        </tr>
+                        <tr>
+                            <td height="23" colspan="3">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th valign="top">Password</th>
+                            <th>:</th>
+                            <td><input type="password" size=40 class="inp-form" name="password" required pattern="{3,20}" /></td>
+                        </tr> 
+                        <tr>
+                            <td height="23" colspan="3">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th valign="top">Email</th>
+                            <th>:</th>
+                            <td><input type="text" size=40 class="inp-form" name="email" required pattern="{3,30}" /></td>
+                            <td></td>
+                        </tr> 
+                        <tr><td height="23" colspan="3">&nbsp;</td></tr>
+                        <tr>
+                            <td><a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Kembali</a></td>
+                            <td>&nbsp;</td>
+                            <td><label for="textfield3">
+                                <button type="submit" name="button" class="btn btn-info">SAVE</button>
+                                <button type="reset" class="btn btn-danger">RESET</button>
+                            </label></td>
+                            <td width="67"><div align="right"></div></td>
                         </tr>
                         </table>
                         </form>
@@ -83,7 +80,7 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>Kode Admin</td>
+                            <td>Id Admin</td>
                             <td>:</td>
                             <td>
                                 <input type="text" size=40  name="id_admin" value="<?php echo $data->id_admin ?>" readonly required >
@@ -148,9 +145,15 @@
                                 <p>&nbsp;</p>
                                 <table width="204" border="0">
                                 <tr>
-                                    <td width="259"><a href="<?php echo site_url('admin/admin') ?>">&lt;&lt; Batal</a></td>
-                                    <td width="119"><input type="submit" name="button" id="button" value="Update" /></td>
+                                
+                                <div>
+                                    <a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Kembali</a></td>
+                                    <button type="submit" name="button" class="btn btn-info">UPDATE</button>
+                                </div>
                                 </tr>
+
+
+
                                 </table>
                                 </div>
                             </td>
@@ -168,10 +171,15 @@
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/admin2.png" width="70" height="70" /></td>
-                                <td width="521"><h1>Kelola Admin</h1></td>
-                            </tr>
-                            </br>	      
+                                <td width="500"><h1>Kelola Admin</h1></td>
+                            </tr>  
                         </table>
+
+                        <hr>
+                            <a href="<?php echo site_url()?>admin/create"><button type="button" class="btn btn-warning" "btn-lg">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                            Create Admin</button></a>
+                        <hr>
                                     
                         <script type="text/javascript">
                         function tanya ()
@@ -183,33 +191,32 @@
                         }
                         </script>
                         
-                        <table width='1040'  border='1' style=''>
-                            <tr>
-                                <p align='center'><th bgcolor='#8a9cae'>Kode Admin</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Nama</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Username</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Password</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Email</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Edit</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Hapus</th></p>
-                            </tr>
-		
-    <?php foreach ($list as $l) { ?>
+                        <br>
+                        <table class="table table-striped">
+                        <thead>
+                            <th>ID Admin</th>
+                            <th>Nama Admin</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>&nbsp;Opsi</th>
+                        </thead>
+
+                        <?php foreach ($list as $l) { ?>
 			
 			                <tr>
                                 <td><?php echo $l->id_admin ?></td>
                                 <td><?php echo $l->name ?></td>
                                 <td><?php echo $l->username ?></td>
-                                <td><?php echo $l->password ?></td>
                                 <td><?php echo $l->email ?></td>
-				                <td align='center' >
-				                    <a href='<?php echo site_url('admin/update/'.$l->id_admin) ?>'>
-				                        <img src='<?php echo base_url('assets/') ?>images/edit2.png' width='20' height='20' alt=''/>
-                                    </a>
-				                </td>
-				                <td align='center'>
+				                <td>
+                                    <a href='<?php echo site_url('admin/update/'.$l->id_admin) ?>'>
+                                        <button type="button" name="button" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                        &nbsp;Update </button>
 				                    <a onClick='return tanya()' href='<?php echo site_url('admin/delete/'.$l->id_admin) ?>'>
-				                        <img src='<?php echo base_url('assets/') ?>images/del2.png' width='20' height='20' alt='' />
+                                        <button type="button" name="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        &nbsp;Delete </button>
 				                    </a>
                                 </td>
 			                </tr>
@@ -218,8 +225,12 @@
 
 			            </table>
                         </br></br>
-                        <p><a href="<?php echo site_url('admin/create') ?>">Tambah Admin   >></a></p>
+                        
 
 <?php } ?>
 
+
+
 <?php include "footer.php" ?>
+
+

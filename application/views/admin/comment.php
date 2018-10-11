@@ -19,6 +19,17 @@
                         }
                         </script>
 
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tutorial</th>
+                            <th>Kategori</th>
+                            <th>Penulis</th>
+                            <th>Hasil</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
                         <table width='1040' border='1' bo cellspacing='0' cellpadding='0'>
                             <tr>
                                 <p align='center'><th width='10%' bgcolor='#8a9cae'>Kode Komentar</th></p>
