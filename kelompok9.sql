@@ -102,7 +102,7 @@ CREATE TABLE `news` (
   `headline` varchar(100) NOT NULL,
   `about` text NOT NULL,
   `photo` varchar(200) NOT NULL,
-  `author` varchar(10) NOT NULL,
+  `author` varchar(20) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

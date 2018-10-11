@@ -209,6 +209,12 @@
                                 <td width="521"><h1>Kelola Info</h1></td>
                             </tr>	      
                         </table>
+
+                        <hr>
+                            <a href="<?php echo site_url()?>news/create"><button type="button" class="btn btn-warning" "btn-lg">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                            Create News</button></a>
+                        <hr>
                                     
                         <script type="text/javascript">
                         function tanya ()
@@ -219,46 +225,44 @@
                             { return false; }
                         }
                         </script>
-    
-                        <table width='1040' border='1' >
+
+                        <table class="table table-striped">
+                        <thead>
+                            <th>ID News</th>
+                            <th>Title</th>
+                            <th>About</th>
+                            <th>Photo</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>&nbsp;Action</th>
+                        </thead>
+
+                        <?php foreach ($list as $n) { ?>
+
                             <tr>
-                                <p align='center'><th bgcolor='#8a9cae'>Judul</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Headline</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Berita</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Gambar</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Penulis</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Tanggal</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Edit</th></p>
-                                <p align='center'><th bgcolor='#8a9cae'>Hapus</th></p>
-                            </tr>
-                                
-    <?php foreach ($list as $l) { ?>
-                                    
-                            <tr>
-                                <td><?php echo $l->title ?></td>
-                                <td><?php echo substr($l->headline,0,20) ?>... </td>
-                                <td><?php echo substr($l->about,0,100) ?>... </td>
-                                <td><img src="<?php echo base_url('assets/foto/'.$l->photo) ?>" width="100" height="100"></td>    
-                                <td><?php echo $l->author ?></td>
-                                <td><?php echo date("d/m/Y", strtotime($l->date)) ?></td>
-                                <td align='center'>
-                                    <a href='<?php echo site_url('news/update/'.$l->id_news) ?>'>
-                                        <img src='<?php echo base_url('assets/') ?>images/edit2.png' width='20' height='20' alt=''/>
-                                    </a>
-                                </td>
-                                <td align='center'>
-                                    <a onClick='return tanya()' href='<?php echo site_url('news/delete/'.$l->id_news) ?>'>
-                                        <img src='<?php echo base_url('assets/') ?>images/del2.png' width='20' height='20' alt='' />
-                                    </a>
+                                <td><?php echo $n->id_news ?></td>
+                                <td><?php echo $n->title ?></td>
+                                <td><?php echo $n->about ?></td>
+                                <td><img src='<?php echo base_url('assets/foto/'.$n->photo) ?>' width='120' height='100' /></td>
+                                <td><?php echo $n->author ?></td>
+                                <td><?php echo $n->date ?></td>
+                                <td>
+                                    <a href='<?php echo site_url('news/update/'.$n->id_news) ?>'>
+                                        <button type="button" name="button" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                        &nbsp;Update </button>
+                                    <a onClick='return tanya()' href='<?php echo site_url('news/delete/'.$n->id_news) ?>'>
+                                        <button type="button" name="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        &nbsp;Delete </button>
+				                    </a>
                                 </td>
                             </tr>
 
-    <?php } ?>
+                        <?php } ?>
 
                         </table>
                         </br></br>
-                        <p><a href="<?php echo site_url('news/create') ?>">Tambah Berita  >></a></p>
-
 <?php } ?>
 
 <?php include "footer.php" ?>
