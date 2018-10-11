@@ -8,14 +8,14 @@
                         <table width="1000" height="237" border="0">
                         <tr>
                             <td width="100" rowspan="1"><img src="<?php echo base_url('assets/')?>images/icon/berita2.png" width="70" height="70" /></td>
-                            <td colspan="3"><h1>Tambah Berita</h1></td>
+                            <td colspan="3"><h1>Create News</h1></td>
                         </tr>
                         <tr></tr>
                         <tr>
                             <td height="40" colspan="3"></td>
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <th valign="top">Judul</th>
+                                <th valign="top">Title</th>
                                 <th>:</th>
                                 <td width="900"><input type="text" size=40 class="inp-form" name="title" required pattern=".{5,100}" ></td>
                             </tr> 
@@ -27,18 +27,18 @@
                             </tr>
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <th valign="top">Berita</th>
+                                <th valign="top">News</th>
                                 <th>:</th>
                                 <td><textarea class="jos" name="about" ></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <td><font color="red"> *Ketik Berita Disini</font></td>
+                                <td><font color="red"> *Enter News Content Here</font></td>
                             </tr>
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <th valign="top">Gambar</th>
+                                <th valign="top">Photo</th>
                                 <th>:</th>
                                 <td>
                                     <input type="file" class="inp-form" style="padding:5px;" name="photo" required />
@@ -47,30 +47,26 @@
                             </tr> 
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <th valign="top">Penulis</th>
+                                <th valign="top">Author</th>
                                 <th>:</th>
                                 <td><input type="text" class="inp-form" name="author" value="<?php echo $this->session->name ?>" readonly /></td>
                             </tr> 
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <th valign="top">Tanggal</th>
+                                <th valign="top">Date</th>
                                 <th>:</th>
                                 <td><input type="text" class="inp-form" name="date" value=<?php echo $tgl; ?> readonly/></td>
                                 <td></td>
                             </tr> 
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <td><a href="<?php echo site_url('admin/news') ?>">&lt;&lt; Batal</a></td>
+                                <td><a class="btn btn-primary" href="<?php echo site_url('admin/gallery') ?>">Back</a></td>
                                 <td>&nbsp;</td>
-                                <td>
-                                    <label for="textfield3">
-                                    <input type="submit" name="button" id="button" value="Save" />
-                                    <input type="reset" value="Reset" />
-                                    </label>
-                                </td>
-                                <td width="67">
-                                    <div align="right"></div>
-                                </td>
+                                <td><label for="textfield3">
+                                    <button type="submit" name="button" class="btn btn-info">SAVE</button>
+                                    <button type="reset" name="button" class="btn btn-danger">RESET</button>
+                                </label></td>
+                                <td width="67"><div align="right"></div></td>
                             </tr>
                         </table>
                         </form>
@@ -88,7 +84,7 @@
                         <tr>
                             <td colspan="3">
                                 <div align="center">
-                                    <h2><strong>Edit Data Berita</strong></h2>
+                                    <h2><strong>Edit News Data</strong></h2>
                                     <hr size="2" width="600px" />
                                 </div>
                             </td>
@@ -186,8 +182,10 @@
                                 <p>&nbsp;</p>
                                 <table width="204" border="0">
                                     <tr>
-                                        <td width="259"><a href="<?php echo site_url('admin/news') ?>">&lt;&lt; Batal</a></td>
-                                        <td width="119"><input type="submit" name="button" id="button" value="Update" /></td>
+                                        <div>
+                                            <a class="btn btn-primary" href="<?php echo site_url('admin/news') ?>">Back</a></td>
+                                            <button type="submit" name="button" class="btn btn-info">UPDATE</button>
+                                        </div>
                                     </tr>
                                 </table>
                                 </div>
@@ -199,14 +197,13 @@
                         </form>
                         </div>
                         </fieldset>
-
 <?php } else { ?>
 
                         <?php echo $this->session->flashdata('notif'); ?>
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo site_url('assets/') ?>images/icon/berita2.png" width="70" height="70" /></td>
-                                <td width="521"><h1>Kelola Info</h1></td>
+                                <td width="521"><h1>Manage Info</h1></td>
                             </tr>	      
                         </table>
 

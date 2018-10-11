@@ -20,11 +20,12 @@
     <div id="menu">
         <div class="nav2">
             <ul>
-                <li><a href="<?php echo site_url('admin/') ?>">Beranda</a></li>
-                <li><a href="<?php echo site_url('admin/admin') ?>">Data Admin</a></li>
-                <li><a href="<?php echo site_url('admin/news') ?>">Data Berita</a></li>
-                <li><a href="<?php echo site_url('admin/gallery') ?>">Data Gambar</a></li>
-                <li><a href="<?php echo site_url('admin/comment') ?>">Data Komentar</a></li>
+                <li><a href="<?php echo site_url('admin/') ?>">Home</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="<?php echo site_url('admin/admin') ?>">Admin</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="<?php echo site_url('admin/news') ?>">News</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="<?php echo site_url('admin/gallery') ?>">Gallery</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="<?php echo site_url('admin/comment') ?>">Comment</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li><a href="<?php echo site_url('log/out') ?>">Logout</a></li>
             </ul>
         </div>

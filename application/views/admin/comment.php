@@ -4,7 +4,7 @@
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/berita2.png" width="70" height="70" /></td>
-                                <td width="521"><h1>Kelola Komentar</h1></td>
+                                <td width="521"><h1>Manage Comment</h1></td>
                             </tr>
                             </br>	      
                         </table>

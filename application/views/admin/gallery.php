@@ -6,7 +6,7 @@
                         <table width="533" height="237" border="0">
                         <tr>
                             <td width="145" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/galeri2.png" width="70" height="70" /></td>
-                            <td colspan="2"><h1>Tambah Galeri</h1></td>
+                            <td colspan="2"><h1>Create Gallery</h1></td>
                         </tr>
                         <tr></tr>
                         <tr>
@@ -19,7 +19,7 @@
                             </tr>
                             <tr>
                                 <tr>
-                                    <th valign="top">Gambar</th>
+                                    <th valign="top">Photo</th>
                                     <th>:</th>
                                     <td>
                                         <input type="file" class="inp-form" style="padding:5px;" required name="photo"/>
@@ -31,7 +31,7 @@
                                 </tr>
                                 <tr>
                                 <tr>
-                                    <th valign="top">Keterangan</th>
+                                    <th valign="top">Description</th>
                                     <th>:</th>
                                     <td><input type="text" size=60 class="inp-form" name="description" required /></td>
                                 </tr> 
@@ -42,17 +42,13 @@
                                     <td height="23" colspan="3">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="<?php echo site_url('admin/gallery') ?>">&lt;&lt; Batal</a></td>
+                                    <td><a class="btn btn-primary" href="<?php echo site_url('admin/news') ?>">Kembali</a></td>
                                     <td>&nbsp;</td>
-                                    <td>
-                                        <label for="textfield3">
-                                        <input type="submit" name="button" id="button" value="Save" />
-                                        <input type="reset" value="Reset" />
-                                        </label>
-                                    </td>
-                                    <td width="67">
-                                        <div align="right"></div>
-                                    </td>
+                                    <td><label for="textfield3">
+                                        <button type="submit" name="button" class="btn btn-info">SAVE</button>
+                                        <button type="reset" name="button" class="btn btn-danger">RESET</button>
+                                    </label></td>
+                                    <td width="67"><div align="right"></div></td>
                                 </tr>
                             </tr>
                         </table>
@@ -68,7 +64,7 @@
                         <table width="836" height="237" border="0">
                         <tr>
                             <td colspan="3"><div align="center">
-                                <h2><strong>Edit Data Gambar</strong></h2>
+                                <h2><strong>Edit Photo Data</strong></h2>
                             <hr size="2" width="600px" /></div>
                             </td>
                         </tr>
@@ -125,8 +121,10 @@
                                 <p>&nbsp;</p>
                                 <table width="204" border="0">
                                     <tr>
-                                        <td width="259"><a href="<?php echo site_url('admin/gallery') ?>">&lt;&lt; Batal</a></td>
-                                        <td width="119"><input type="submit" name="button" id="button" value="Update" /></td>
+                                        <div>
+                                            <a class="btn btn-primary" href="<?php echo site_url('admin/gallery') ?>">Back</a></td>
+                                            <button type="submit" name="button" class="btn btn-info">UPDATE</button>
+                                        </div>
                                     </tr>
                                 </table>
                                 </div>
@@ -138,15 +136,13 @@
                         </form>
                         </div>
                         </fieldset>
-
-
 <?php } else { ?>
 
                         <?php echo $this->session->flashdata('notif'); ?>
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/galeri2.png" width="70" height="70" /></td>
-                                <td width="521"><h1>Kelola Galeri</h1></td>
+                                <td width="521"><h1>Manage Gallery</h1></td>
                             </tr>
                         </br>	      
                         </table>

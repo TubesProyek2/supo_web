@@ -6,11 +6,11 @@
                         <table width="533" height="237" border="0">
                         <tr>
                             <td width="145" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/admin2.png" width="70" height="70" /></td>
-                            <td colspan="2"><h1>Tambah Admin</h1></td>
+                            <td colspan="2"><h1>Create Admin</h1></td>
                         </tr>
                         <tr><td height="23" colspan="3">&nbsp;</td></tr>
                         <tr>
-                            <th valign="top">Nama </th>
+                            <th valign="top">Name </th>
                             <th>:</th>
                             <td><input type="text" size=40 class="inp-form" name="name" required pattern="[a-zA-Z]{3,20}" /></td>
                         </tr> 
@@ -41,11 +41,11 @@
                         </tr> 
                         <tr><td height="23" colspan="3">&nbsp;</td></tr>
                         <tr>
-                            <td><a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Kembali</a></td>
+                            <td><a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Back</a></td>
                             <td>&nbsp;</td>
                             <td><label for="textfield3">
                                 <button type="submit" name="button" class="btn btn-info">SAVE</button>
-                                <button type="reset" class="btn btn-danger">RESET</button>
+                                <button type="reset" name="button" class="btn btn-danger">RESET</button>
                             </label></td>
                             <td width="67"><div align="right"></div></td>
                         </tr>
@@ -62,7 +62,7 @@
                         <table width="836" height="237" border="0">
                         <tr>
                             <td colspan="3"><div align="center">
-                                <h2><strong>Edit Data Admin</strong></h2>
+                                <h2><strong>Edit Admin Data</strong></h2>
                                 <hr size="2" width="600px" /></div>
                             </td>
                         </tr>
@@ -144,7 +144,7 @@
                                 <tr>
                                 
                                 <div>
-                                    <a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Kembali</a></td>
+                                    <a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Back</a></td>
                                     <button type="submit" name="button" class="btn btn-info">UPDATE</button>
                                 </div>
                                 </tr>
@@ -168,7 +168,7 @@
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/admin2.png" width="70" height="70" /></td>
-                                <td width="500"><h1>Kelola Admin</h1></td>
+                                <td width="500"><h1>Manage Admin</h1></td>
                             </tr>  
                         </table>
 
