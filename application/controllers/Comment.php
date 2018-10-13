@@ -15,6 +15,26 @@ class Comment extends CI_Controller
         }
     }
 
+    public function create()
+    {
+        $id=$this->input->post('id_news');
+        $data = [
+            'id_news' => $id,
+            'name' => $this->input->post('name'),
+            'email' => $this->input->post('email'),
+            'comment' => $this->input->post('comment'),
+            'date' => date("Y-m-d"),
+            'status' => "-"
+        ];
+
+        if($this->Comment_model->insert($data))
+        { $this->session->set_flashdata('notif','Tambah Komentar Berhasil! Komentar akan ditampilkan setelah terverifikasi!'); }
+        else
+        { $this->session->set_flashdata('notif','Tambah Komentar Gagal!'); }
+
+        redirect('home/detail/'.$id,'refresh');
+    }
+
     public function stat($id)
     {
         $data['status'] = 'BUKAN SPAM';

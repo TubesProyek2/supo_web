@@ -20,13 +20,12 @@
     <div id="menu">
         <div class="nav2">
             <ul>
-                <li><a href="<?php echo site_url('admin/') ?>">Home</a></li>&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('admin/admin') ?>">Admin</a></li>&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('admin/news') ?>">Info</a></li>&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('admin/gallery') ?>">Gallery</a></li>&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('admin/comment') ?>">Komentar</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('log/out') ?>">Logout</a></li>
+                <li><a href="<?php echo site_url('admin/') ?>">Home</a></li>
+                <li><a href="<?php echo site_url('admin/admin') ?>">Admin</a></li>
+                <li><a href="<?php echo site_url('admin/news') ?>">Info</a></li>
+                <li><a href="<?php echo site_url('admin/gallery') ?>">Gallery</a></li>
+                <li><a href="<?php echo site_url('admin/comment') ?>">Komentar</a></li>
+                <li class="pull-right"><a href="<?php echo site_url('log/out') ?>">Logout</a></li>
             </ul>
         </div>
     </div>

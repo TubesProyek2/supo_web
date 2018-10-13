@@ -17,7 +17,10 @@ class Home extends CI_Controller
 
     public function detail($id)
     {
-        $data['data'] =  $this->News_model->where($id);
+        $data = [
+            'data' =>  $this->News_model->where($id),
+            'datakom' => $this->Comment_model->where_news($id)
+        ];
         $this->load->view('detail', $data);
     }
 

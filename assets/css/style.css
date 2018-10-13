@@ -19,7 +19,7 @@ body {
 
 #header {
 	background-image: url(../images/header.png);
-	height: 288px;
+	height: 250px;
 	margin-top: 0px;
 }
 
@@ -55,8 +55,9 @@ body {
 }
 			
 #footer {
-	padding: 20px;
-	clear: both;
+    background-image: url(../images/footer.png);
+    height: 250px;
+    margin-top: 0px;
 }
 			
 /*-----------TEXT FORMATTING------------- */
@@ -211,9 +212,6 @@ div.img {
     margin: 5px;
     padding: 5px;
     border: 1px solid #814F2C;
-    height: 180;
-    width: 180;
-    float: left;
     text-align: center;
 }
 

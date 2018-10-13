@@ -15,6 +15,9 @@ class Comment_model extends CI_Model
     public function where($id)
     { return $this->db->get_where('comment', ['id_comment'=>$id])->row(); }
 
+    public function where_news($id)
+    { return $this->db->get_where('comment', ['id_news'=>$id, 'status'=>'BUKAN SPAM'])->result(); }
+
     public function update($id,$data)
     { return $this->db->update('comment', $data, ['id_comment'=>$id]); }
 

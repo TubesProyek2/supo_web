@@ -26,7 +26,7 @@
 	                            <a href="<?php echo site_url('home/detail/'.$l->id_news) ?>">
                                     <h4><?php echo $l->title ?><br></h4>
                                 </a>
-                                <strong>Tanggal : <?php echo $l->date ?> | Posted By : <?php echo $l->author ?></strong>
+                                <strong>Tanggal : <?php echo date("d F Y", strtotime($l->date)) ?> | Posted By : <?php echo $l->author ?></strong>
                             </td>
                         </tr>
                         <tr>

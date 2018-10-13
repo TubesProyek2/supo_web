@@ -12,7 +12,9 @@
 
     <div id="header">
         <h1 style="font-family:'Blackwood Castle', 'Blackwood Castle Shadow', serif; font-size:40px;">
-        <br><br><br>SEJARAH CANDI SONGGORITI</h1>
+            <br><br><br>
+            SEJARAH CANDI SONGGORITI
+        </h1>
     </div>
 
     <div id="sideheader"></div>

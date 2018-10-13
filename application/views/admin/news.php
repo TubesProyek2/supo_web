@@ -2,7 +2,7 @@
 
 <?php if ($page == 'create') { ?>
 
-                        <?php date_default_timezone_set('Asia/Jakarta'); $tgl = date("d/m/Y"); ?>
+                        <?php date_default_timezone_set('Asia/Jakarta'); $tgl = date("d F Y"); ?>
 
                         <form action="<?php echo site_url('news/create') ?>" method="post" enctype="multipart/form-data">
                         <table width="1000" height="237" border="0">
@@ -73,7 +73,7 @@
 
 <?php } elseif ($page == 'update') { ?>
 
-                        <?php date_default_timezone_set('Asia/Jakarta'); $tgl = date("d/m/Y"); ?>
+                        <?php date_default_timezone_set('Asia/Jakarta'); $tgl = date("d F Y"); ?>
 
                         <style type="text/css">#box{ width:300px;}</style>
 
@@ -242,7 +242,7 @@
                                 <td><?php echo $n->about ?></td>
                                 <td><img src='<?php echo base_url('assets/foto/'.$n->photo) ?>' width='120' height='100' /></td>
                                 <td><?php echo $n->author ?></td>
-                                <td><?php echo $n->date ?></td>
+                                <td><?php echo date("d F Y", strtotime($n->date)) ?></td>
                                 <td>
                                     <a href='<?php echo site_url('news/update/'.$n->id_news) ?>'>
                                         <button type="button" name="button" class="btn btn-info">
