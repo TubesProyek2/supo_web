@@ -3,46 +3,54 @@
 <?php if ($page == 'create') { ?>
 
                         <form action="<?php echo site_url('admin/create') ?>" method="post" enctype="multipart/form-data">
-                        <table width="533" height="237" border="0">
+                        <table width="560" height="237" border="0">
                         <tr>
                             <td width="145" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/admin2.png" width="70" height="70" /></td>
                             <td colspan="2"><h1>Create Admin</h1></td>
                         </tr>
                         <tr><td height="23" colspan="3">&nbsp;</td></tr>
                         <tr>
-                            <th valign="top">Name </th>
-                            <th>:</th>
-                            <td><input type="text" size=40 class="inp-form" name="name" required pattern="[a-zA-Z]{3,20}" /></td>
-                        </tr> 
-                        <tr>
-                            <td height="23" colspan="3">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th valign="top">Username </th>
-                            <th>:</th>
-                            <td><input type="text" size=40 class="inp-form" name="username" required pattern="{3,15}" /></td>
+                            <div>
+                                <th valign="top">Nama </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama" required pattern="[a-zA-Z\s]{3,20}"></td>
+                            </div> 
                         </tr>
                         <tr>
                             <td height="23" colspan="3">&nbsp;</td>
                         </tr>
+                        
+                        <tr>
+                            <div>
+                                <th valign="top">Username </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required pattern="{3,15}"></td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td height="23" colspan="3">&nbsp;</td>
+                        </tr>
+                        
                         <tr>
                             <th valign="top">Password</th>
-                            <th>:</th>
-                            <td><input type="password" size=40 class="inp-form" name="password" required pattern="{3,20}" /></td>
+                            <th width="30">:</th>
+                            <td><input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required pattern="{3,20}" /></td>
                         </tr> 
                         <tr>
                             <td height="23" colspan="3">&nbsp;</td>
                         </tr>
+
                         <tr>
                             <th valign="top">Email</th>
-                            <th>:</th>
-                            <td><input type="text" size=40 class="inp-form" name="email" required pattern="{3,30}" /></td>
+                            <th width="30">:</th>
+                            <td><input type="text"  class="form-control" id="email" name="email" placeholder="Masukkan Email" required pattern="{3,30}" /></td>
                             <td></td>
                         </tr> 
                         <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
                         <tr>
                             <td><a class="btn btn-primary" href="<?php echo site_url('admin/admin') ?>">Back</a></td>
-                            <td>&nbsp;</td>
+                            <td>&nbsp;
                             <td><label for="textfield3">
                                 <button type="submit" name="button" class="btn btn-info">SAVE</button>
                                 <button type="reset" name="button" class="btn btn-danger">RESET</button>

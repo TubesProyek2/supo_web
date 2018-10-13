@@ -22,9 +22,9 @@
             <ul>
                 <li><a href="<?php echo site_url('admin/') ?>">Home</a></li>&nbsp;&nbsp;&nbsp;
                 <li><a href="<?php echo site_url('admin/admin') ?>">Admin</a></li>&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('admin/news') ?>">News</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="<?php echo site_url('admin/news') ?>">Info</a></li>&nbsp;&nbsp;&nbsp;
                 <li><a href="<?php echo site_url('admin/gallery') ?>">Gallery</a></li>&nbsp;&nbsp;&nbsp;
-                <li><a href="<?php echo site_url('admin/comment') ?>">Comment</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="<?php echo site_url('admin/comment') ?>">Komentar</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li><a href="<?php echo site_url('log/out') ?>">Logout</a></li>
             </ul>
@@ -37,5 +37,4 @@
             <div id="">
                 <!-- awal konten 1 -->
                 <div class="post">
-                    <h4>&nbsp;</h4>
                     <div class="contentarea">

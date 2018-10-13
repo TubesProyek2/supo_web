@@ -1,8 +1,12 @@
 <?php include "header.php" ?>
 
-                        <br /><br /><br /><br /> 
-                        <center><h3> Selamat Datang </h3></center>
-                        <center><h3> ** <?php echo $this->session->name ?> ** </h3></center>
-                        <br /><br /><br />
+                        <br />
+                        <h1>
+                            <marquee direction="right" scrollamount="8" align="center"> Welcome to Admin Data
+                            <br>
+                            Hello <?php echo $this->session->name ?> :) 
+                            </marquee>
+                        </h1>
+                        <br />
                         
 <?php include "footer.php" ?>
