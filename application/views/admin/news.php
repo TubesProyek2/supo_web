@@ -8,28 +8,29 @@
                         <table width="1000" height="237" border="0">
                         <tr>
                             <td width="100" rowspan="1"><img src="<?php echo base_url('assets/')?>images/icon/berita2.png" width="70" height="70" /></td>
-                            <td colspan="3"><h1>Create News</h1></td>
+                            <td colspan="2"><h1>Create News</h1></td>
                         </tr>
-                        <tr></tr>
-                        <tr>
-                            <td height="40" colspan="3"></td>
-                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
+                        <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
                                 <th valign="top">Title</th>
-                                <th>:</th>
-                                <td width="900"><input type="text" size=40 class="inp-form" name="title" required pattern=".{5,100}" ></td>
-                            </tr> 
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="title" name="title" placeholder="Masukkan Judul" required pattern="{5,100}"></td>
+                            </tr>
+
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
                                 <th valign="top">Headline</th>
-                                <th>:</th>
-                                <td width="100px"><textarea class="notes" name="headline" required pattern="{5,100}" ></textarea></td>
+                                <th width="30">:</th>
+                                <td><textarea class="form-control" rows="3" id="headline" name="headline" placeholder="Masukkan Headline" required pattern="{5,100}" ></textarea></td>
+                    
                             </tr>
+
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <th valign="top">News</th>
-                                <th>:</th>
-                                <td><textarea class="jos" name="about" ></textarea></td>
+                                <th valign="top">About</th>
+                                <th width="30">:</th>
+                                <td><textarea class="jos" id="about" name="about" ></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -37,30 +38,32 @@
                                 <td><font color="red"> *Enter News Content Here</font></td>
                             </tr>
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
                             <tr>
                                 <th valign="top">Photo</th>
                                 <th>:</th>
                                 <td>
-                                    <input type="file" class="inp-form" style="padding:5px;" name="photo" required />
+                                    <input type="file" class="inp-form" id="photo" name="photo" required />
                                     <?php echo $this->upload->display_errors() ?>
                                 </td>
                             </tr> 
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
                             <tr>
                                 <th valign="top">Author</th>
                                 <th>:</th>
-                                <td><input type="text" class="inp-form" name="author" value="<?php echo $this->session->name ?>" readonly /></td>
+                                <td><input type="text" class="form-control" name="author" value="<?php echo $this->session->name ?>" readonly required></td>
                             </tr> 
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
                                 <th valign="top">Date</th>
                                 <th>:</th>
-                                <td><input type="text" class="inp-form" name="date" value=<?php echo $tgl; ?> readonly/></td>
+                                <td><input type="text" class="form-control" name="date" value=<?php echo $tgl; ?> readonly required></td>
                                 <td></td>
                             </tr> 
                             <tr><td height="23" colspan="3">&nbsp;</td></tr>
                             <tr>
-                                <td><a class="btn btn-primary" href="<?php echo site_url('admin/gallery') ?>">Back</a></td>
+                                <td><a class="btn btn-primary" href="<?php echo site_url('admin/news') ?>">Back</a></td>
                                 <td>&nbsp;</td>
                                 <td><label for="textfield3">
                                     <button type="submit" name="button" class="btn btn-info">SAVE</button>
@@ -89,93 +92,75 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td width="189" height="23">&nbsp;</td>
-                            <td width="3">&nbsp;</td>
-                            <td width="622">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>ID Berita</td>
-                            <td>:</td>
-                            <td><input type="text" name="id_news" value="<?php echo $data->id_news ?>" readonly ></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Judul</td>
-                            <td>:</td>
-                            <td><input type="text" size=100 name="title"  value="<?php echo $data->title ?>"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Headline</td>
-                            <td>:</td>
-                            <td><input type="text" size=100 name="headline"  value="<?php echo $data->headline ?>"></td>
-                        </tr>
-                        <tr>
-                            <td>Berita</td>
-                            <td>:</td>
-                            <td>
-                                <textarea class="jos" name="about" width="100" height="1500" ><?php echo $data->about ?></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><font color="red"> *Edit berita disini</font></td>
-                        </tr>
-                        <tr>
-                            <td>Gambar Lama </td>
-                            <td>:</td>
-                            <td><img src='<?php echo site_url('assets/foto/'.$data->photo) ?>' width='100' height='100' /></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Gambar Baru </td>
-                            <td>:</td>
-                            <td><input type="file" name="photo" /></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Penulis </td>
-                            <td>:</td>
-                            <td><input type="text" name="author" value="<?php echo $this->session->name ?>" required ></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Tanggal </td>
-                            <td>:</td>
-                            <td><input type="text" name="date" value=<?php echo $tgl; ?> readonly ></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>   
+
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+                            <tr>
+                                <th valign="top">ID News</th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="id_news" name="id_news" value="<?php echo $data->id_news ?>" readonly required></td>
+                            </tr>
+
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+                            <tr>
+                                <th valign="top">Title</th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="title" name="title" value="<?php echo $data->title ?>" required></td>
+                            </tr>
+
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+                            <tr>
+                                <th valign="top">Headline</th>
+                                <th width="30">:</th>
+                                <td><textarea class="form-control" rows="3" id="headline" name="headline"><?php echo $data->headline ?></textarea></td>
+                            </tr>
+
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+                            <tr>
+                                <th valign="top">About</th>
+                                <th width="30">:</th>
+                                <td><textarea class="jos" id="about" name="about" ><?php echo $data->about ?></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><font color="red"> *Enter News Content Here</font></td>
+                            </tr>
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
+                            <tr>
+                                <th valign="top">Gallery Lama</th>
+                                <th>:</th>
+                                <td>
+                                    <img src='<?php echo site_url('assets/foto/'.$data->photo) ?>' width='100' height='100' />
+                                </td>
+                            </tr> 
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
+                            <tr>
+                                <th valign="top">Gallery Baru</th>
+                                <th>:</th>
+                                <td>
+                                    <input type="file" class="form-control" id="photo" name="photo" required />
+                                    <?php echo $this->upload->display_errors() ?>
+                                </td>
+                            </tr> 
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+ 
+                            <tr>
+                                <th valign="top">Author</th>
+                                <th>:</th>
+                                <td><input type="text" class="form-control" name="author" value="<?php echo $this->session->name ?>" readonly required></td>
+                            </tr> 
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
+                            <tr>
+                                <th valign="top">Date</th>
+                                <th>:</th>
+                                <td><input type="text" class="form-control" name="date" value=<?php echo $tgl; ?> readonly required></td>
+                                <td></td>
+                            </tr> 
+                            <tr><td height="23" colspan="3">&nbsp;</td></tr>
+
                         <tr>
                             <td>
                                 <div align="right">
@@ -203,7 +188,7 @@
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo site_url('assets/') ?>images/icon/berita2.png" width="70" height="70" /></td>
-                                <td width="521"><h1>Manage Info</h1></td>
+                                <td width="521"><h1>Kelola News</h1></td>
                             </tr>	      
                         </table>
 

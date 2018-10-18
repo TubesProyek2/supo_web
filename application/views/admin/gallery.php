@@ -8,41 +8,32 @@
                             <td width="145" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/galeri2.png" width="70" height="70" /></td>
                             <td colspan="2"><h1>Create Gallery</h1></td>
                         </tr>
-                        <tr></tr>
+                        <tr><td height="23" colspan="3">&nbsp;</td></tr>
                         <tr>
-                            <td height="40" colspan="3"></td>
-                            <tr>
-                                <td height="23" colspan="3">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td height="23" colspan="3">&nbsp;</td>
-                            </tr>
-                            <tr>
+                            <div>
+                                <th valign="top">Photo </th>
+                                <th width="30">:</th>
+                                <td><input type="file" class="form-control" id="photo" name="photo" required></td>
+                                <?php echo $this->upload->display_errors() ?>
+                            </div> 
+                        </tr>
+                        <tr>
+                            <td height="23" colspan="3">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                <th valign="top">Description </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="description" name="description" placeholder="Masukkan Judul" required></td>
+                            </div> 
+                        </tr>
+                        <tr>
+                            <td height="23" colspan="3">&nbsp;</td>
+                        </tr>
+
                                 <tr>
-                                    <th valign="top">Photo</th>
-                                    <th>:</th>
-                                    <td>
-                                        <input type="file" class="inp-form" style="padding:5px;" required name="photo"/>
-                                        <?php echo $this->upload->display_errors() ?>
-                                    </td>
-                                </tr> 
-                                <tr>
-                                    <td height="23" colspan="3">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <th valign="top">Description</th>
-                                    <th>:</th>
-                                    <td><input type="text" size=60 class="inp-form" name="description" required /></td>
-                                </tr> 
-                                <tr>
-                                    <td height="23" colspan="3">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td height="23" colspan="3">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn btn-primary" href="<?php echo site_url('admin/news') ?>">Kembali</a></td>
+                                    <td><a class="btn btn-primary" href="<?php echo site_url('admin/gallery') ?>">Back</a></td>
                                     <td>&nbsp;</td>
                                     <td><label for="textfield3">
                                         <button type="submit" name="button" class="btn btn-info">SAVE</button>
@@ -64,7 +55,7 @@
                         <table width="836" height="237" border="0">
                         <tr>
                             <td colspan="3"><div align="center">
-                                <h2><strong>Edit Photo Data</strong></h2>
+                                <h2><strong>Edit Gallery Data</strong></h2>
                             <hr size="2" width="600px" /></div>
                             </td>
                         </tr>
@@ -73,48 +64,40 @@
                             <td width="3">&nbsp;</td>
                             <td width="622">&nbsp;</td>
                         </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Kode Gambar</td>
-                            <td>:</td>
-                            <td>
-                                <input type="text"  name="id_photo" value="<?php echo $data->id_photo ?>" readonly>
-                            </td>
-                        </tr>                
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Gambar Lama </td>
-                            <td>:</td>
-                            <td><img src='<?php echo site_url('assets/foto/'.$data->photo) ?>' width='100' height='100' /></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Gambar baru </td>
-                            <td>:</td>
-                            <td><input type="file" name="photo"/></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>Keterangan</td>
-                            <td>:</td>
-                            <td><input type="text"  size=60 name="description" value="<?php echo $data->description ?>" required ></td>
-                        </tr>
+                        
+                            <tr>
+                                <th valign="top">ID Gallery</th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="id_photo" name="id_photo" value="<?php echo $data->id_photo ?>" readonly required></td>
+                            </tr>
+                            <tr><td height="15" colspan="3">&nbsp;</td></tr>
+                        
+                            <tr>
+                                <th valign="top">Gallery Lama</th>
+                                <th>:</th>
+                                <td>
+                                    <img src='<?php echo site_url('assets/foto/'.$data->photo) ?>' width='100' height='100' />
+                                </td>
+                            </tr> 
+                            <tr><td height="15" colspan="3">&nbsp;</td></tr>
+
+                            <tr>
+                                <th valign="top">Gallery Baru</th>
+                                <th>:</th>
+                                <td>
+                                    <input type="file" class="form-control" id="photo" name="photo" required />
+                                    <?php echo $this->upload->display_errors() ?>
+                                </td>
+                            </tr> 
+                            <tr><td height="15" colspan="3">&nbsp;</td></tr>
+
+                            <tr>
+                                <th valign="top">Keterangan</th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="description" name="description" value="<?php echo $data->description ?>" required></td>
+                            </tr>
+                            <tr><td height="15" colspan="3">&nbsp;</td></tr>
+
                         <tr>
                             <td>
                                 <div align="right">
@@ -142,7 +125,7 @@
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/galeri2.png" width="70" height="70" /></td>
-                                <td width="521"><h1>Manage Gallery</h1></td>
+                                <td width="521"><h1>Kelola Gallery</h1></td>
                             </tr>
                         </br>	      
                         </table>

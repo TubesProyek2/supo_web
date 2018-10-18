@@ -80,70 +80,60 @@
                             <td width="622">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <div>
+                                <th valign="top">ID Admin </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="id_admin" name="id_admin" value="<?php echo $data->id_admin ?>" readonly required></td>
+                            </div> 
                         </tr>
                         <tr>
-                            <td>Id Admin</td>
-                            <td>:</td>
-                            <td>
-                                <input type="text" size=40  name="id_admin" value="<?php echo $data->id_admin ?>" readonly required >
-                            </td>
+                            <td height="15" colspan="3">&nbsp;</td>
+                        </tr>
+                        
+                        <tr>
+                            <div>
+                                <th valign="top">Nama </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="name" name="name" value="<?php echo $data->name ?>" required pattern="[a-zA-Z]{3,20}"></td>
+                            </div> 
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td height="15" colspan="3">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                <th valign="top">Username </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="username" name="username" value="<?php echo $data->username ?>" required pattern="{3,15}"></td>
+                            </div> 
                         </tr>
                         <tr>
-                            <td>Nama</td>
-                            <td>:</td>
-                            <td>
-                                <input type="text" size=40  name="name" value="<?php echo $data->name ?>" required pattern="[a-zA-Z]{3,20}" >
-                            </td>
+                            <td height="15" colspan="3">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                <th valign="top">Password </th>
+                                <th width="30">:</th>
+                                <td><input type="password" class="form-control" id="password" name="password" value="<?php echo $data->password ?>" required pattern="{3,20}"></td>
+                            </div> 
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td height="15" colspan="3">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <div>
+                                <th valign="top">Email </th>
+                                <th width="30">:</th>
+                                <td><input type="text" class="form-control" id="email" name="email" value="<?php echo $data->email ?>" required pattern="{3,20}"></td>
+                            </div> 
                         </tr>
                         <tr>
-                            <td>Username </td>
-                            <td>:</td>
-                            <td>
-                                <input type="text" size=40  name="username" value="<?php echo $data->username ?>" required pattern="{3,15}" >
-                            </td>
+                            <td height="15" colspan="3">&nbsp;</td>
                         </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Password </td>
-                            <td>:</td>
-                            <td>
-                                <input type="password" size=40  name="password" value="<?php echo $data->password ?>" required pattern="{3,20}" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr> 
-                        <tr>
-                            <td>Email </td>
-                            <td>:</td>
-                            <td>
-                                <input type="text"  size=40 name="email" value="<?php echo $data->email ?>" required pattern="{3,20}" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>   
+                        
                         <tr>
                             <td>
                                 <div align="right">
@@ -176,7 +166,7 @@
                         <table width="644" border="0">
                             <tr>
                                 <td width="63" rowspan="2"><img src="<?php echo base_url('assets/')?>images/icon/admin2.png" width="70" height="70" /></td>
-                                <td width="500"><h1>Manage Admin</h1></td>
+                                <td width="500"><h1>Kelola Admin</h1></td>
                             </tr>  
                         </table>
 
